@@ -64,6 +64,7 @@ app.get('/conexion', (req, res) => {
     const index = clientesConectados.indexOf(res);
     if (index !== -1) {
       clientesConectados.splice(index, 1);
+      notificador();
     }
   });
 });
